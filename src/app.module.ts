@@ -6,7 +6,7 @@ import { UserModule } from './user/user.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: ['.env.development.local'],
+      envFilePath: ['.env.development.local']
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -16,11 +16,11 @@ import { UserModule } from './user/user.module';
       port: Number(process.env.DB_PORT),
       username: process.env.DB_USERNAME,
       synchronize: true,
-      entities: [`${__dirname}/**/*.entity{.js,.ts}`],
+      entities: [`${__dirname}/**/*.entity{.js,.ts}`]
     }),
-    UserModule,
+    UserModule
   ],
   controllers: [],
-  providers: [],
+  providers: []
 })
 export class AppModule {}
