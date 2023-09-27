@@ -8,6 +8,7 @@ import { UserEntity } from './interfaces/user.entity';
 @Injectable()
 export class UserService {
     constructor(
+        // eslint-disable-next-line prettier/prettier
         @InjectRepository(UserEntity)
         private readonly userRepository: Repository<UserEntity>,
     ) {}
@@ -18,6 +19,7 @@ export class UserService {
         //        console.log('hash', pwdHash)
         return this.userRepository.save({
             ...createUserDto,
+            user_type: 1,
             pwd: pwdHash,
         });
     }
