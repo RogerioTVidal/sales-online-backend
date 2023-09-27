@@ -1,12 +1,16 @@
 {
-  "singleQuote": true,
+  "bracketSpacing": true,
   "parser": "flow",
-  "trailingComma": "none",
   "printWidth": 80,
   "prettier/prettier": [
     "error",
     {
-      "endOfLine": "auto"
+      "singleQuote": true,
+      "parser": "flow"
     }
-  ]
+  ],
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 4,
+  "trailingComma": "none"
 }
