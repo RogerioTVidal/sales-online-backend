@@ -8,7 +8,6 @@ import { UserEntity } from './interfaces/user.entity';
 @Injectable()
 export class UserService {
     constructor(
-        // eslint-disable-next-line prettier/prettier
         @InjectRepository(UserEntity)
         private readonly userRepository: Repository<UserEntity>,
     ) {}
@@ -16,7 +15,7 @@ export class UserService {
     async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
         const saltOrRounds = 10;
         const pwdHash = await hash(createUserDto.pwd, saltOrRounds);
-        //        console.log('hash', pwdHash)
+        //        console.log('hash', pwdHash) //vídeo 04
         return this.userRepository.save({
             ...createUserDto,
             user_type: 1,
