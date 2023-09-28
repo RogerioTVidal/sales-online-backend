@@ -18,13 +18,13 @@ export class UserEntity {
     nin: string; //National Idenfication Number
 
     @Column({ name: 'user_type', nullable: false })
-    user_type: number;
+    userType: number;
 
     @Column({ name: 'created_at', nullable: false })
-    created_at: string;
+    createdAt: string;
 
     @Column({ name: 'updated_at', nullable: false })
-    updated_at: string;
+    updatedAt: string;
 
     @Column({ name: 'pwd', nullable: false })
     pwd: string;
