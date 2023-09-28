@@ -5,8 +5,8 @@ export class StateEntity {
     @PrimaryGeneratedColumn('rowid')
     id: number;
 
-    @Column({ name: 'abbreviations', nullable: false })
-    abbreviations: string;
+    @Column({ name: 'abbreviation', nullable: false })
+    abbreviation: string;
 
     @Column({ name: 'name', nullable: false })
     name: string;
