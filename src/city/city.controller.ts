@@ -6,6 +6,7 @@ import { CityEntity } from './entities/city.entity';
 @Controller('city')
 export class CityController {
     constructor(
+        // eslint-disable-next-line prettier/prettier
         private readonly cityService: CityService
     ) { }
 
