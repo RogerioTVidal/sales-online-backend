@@ -5,9 +5,11 @@
   "printWidth": 80,
   "prettier/prettier": [
     "error",
+    {},
     {
+      "parser": "flow",
       "singleQuote": true,
-      "parser": "flow"
+      "usePrettierrc": false
     }
   ],
   "semi": true,
