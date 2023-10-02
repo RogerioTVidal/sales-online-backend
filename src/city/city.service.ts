@@ -13,11 +13,11 @@ export class CityService {
         // eslint-disable-next-line prettier/prettier
         @InjectRepository(CityEntity)
         private readonly cityRepository: Repository<CityEntity>,
-        private readonly cacheService: CacheSalesService,
+        private readonly cacheSalesService: CacheSalesService,
     ) {}
 
     async getAllCitiesByStateId(stateIdPar: number): Promise<CityEntity[]>{
-        return this.cacheService.getCache<CityEntity[]>(`state_${stateIdPar}`,
+        return this.cacheSalesService.getCache<CityEntity[]>(`state_${stateIdPar}`,
             () => this.cityRepository.find({where:{stateId: stateIdPar}})
         );
 
