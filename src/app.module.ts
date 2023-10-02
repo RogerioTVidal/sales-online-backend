@@ -5,6 +5,7 @@ import { UserModule } from './user/user.module';
 import { StateModule } from './state/state.module';
 import { CityModule } from './city/city.module';
 import { AddressModule } from './address/address.module';
+import { CacheSalesModule } from './cacheSales/cacheSales.module';
 
 @Module({
     imports: [
@@ -25,7 +26,8 @@ import { AddressModule } from './address/address.module';
         UserModule,
         StateModule,
         CityModule,
-        AddressModule
+        AddressModule,
+        CacheSalesModule
     ],
     controllers: [], //verbs
     providers: [] //services - business logic
